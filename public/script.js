@@ -3,9 +3,6 @@ const loading = document.querySelector(".full");
 
 const PATHNAME = window.location.pathname;
 
-const navbar = `
-`
-
 
 
 /**

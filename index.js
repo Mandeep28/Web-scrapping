@@ -4,6 +4,9 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const os = require("os");
 require("dotenv").config({});
+const cors = require("cors");
+
+app.use(cors());
 
 const app = express();
 const port = process.env.PORT || 8001;
