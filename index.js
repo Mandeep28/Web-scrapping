@@ -2,9 +2,11 @@ const express = require("express");
 const path = require("path");
 const axios = require("axios");
 const cheerio = require("cheerio");
+const os = require("os");
+require("dotenv").config({});
 
 const app = express();
-const port = 8001;
+const port = process.env.PORT || 8001;
 app.use(express.json());
 
 // Serve static files from a directory (e.g., "public")
@@ -84,5 +86,6 @@ app.post("/data", async(req, res) => {
 
 // Start the Express server
 app.listen(port, () => {
+  console.log(`os hostname = `, os.hostname());
   console.log(`Server is running on  http://localhost:${port}`);
 });
