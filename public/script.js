@@ -41,7 +41,7 @@ if(PATHNAME === '/'){
             },
             body: JSON.stringify({ url: url, negativeMark: negative })
         }
-        const response = await fetch('http://localhost:8001/data', options)
+        const response = await fetch('https://ssc-result.onrender.com/data', options)
           const json = await response.json();
           if(json.status === 200){
             localStorage.setItem("resultData", JSON.stringify(json.data));
